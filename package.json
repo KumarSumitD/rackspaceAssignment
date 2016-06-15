@@ -1,0 +1,36 @@
+{
+  "name": "rackspace",
+  "version": "1.0.0",
+  "description": "This project implements rackspace assignment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.10.6",
+    "glob": "~3.2.8",
+    "jade": "~1.9.2",
+    "lodash": "^3.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-nodemon": "~0.1.2",
+    "grunt-shell": "~0.7.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-cli": "0.0.4",
+    "karma-jasmine": "^0.3.5",
+    "bower": "~1.2.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyleondata/JsInterviewChallenge.git"
+  },
+  "author": "Kumar Sumit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyleondata/JsInterviewChallenge/issues"
+  },
+  "homepage": "https://github.com/kyleondata/JsInterviewChallenge"
+}

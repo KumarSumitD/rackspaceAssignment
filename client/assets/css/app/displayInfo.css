@@ -1,0 +1,65 @@
+/* Directive Styling Starts*/
+.info-wrapper.loader { border: 1px solid #d1d1d1; }
+.info-wrapper .info-error {
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  color: #333;
+  border: 1px solid #ff7b7b;
+  background: #fffff7;
+  border-radius: 3px;
+  height: 40px;
+  left: 25%;
+  padding-top: 10px;
+  width: auto;
+}
+.info-wrapper,
+.info-loader,
+.info-error {
+  position: absolute;
+  border-bottom: 1px solid #d1d1d1;
+  height: 400px;
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: auto;
+  top: 80px;
+  z-index: 10;
+}
+.info-loader { left: 40% }
+.table-header-wrapper {
+  position: fixed;
+  height: 37px;
+  top: 50px;
+  left: 8px;
+  z-index: 100;
+  width: 78.3%;
+}
+.table-data-wrapper {
+  float: left;
+  width: 99%;
+}
+
+.table-header-wrapper,  .table-data-wrapper { border: 1px solid #d1d1d1;}
+
+.th-row, .td-row {
+  float: left;
+  width: 25%;
+  overflow-y: scroll;
+  border-right: 1px solid #d1d1d1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.th-row:last-child, .td-row:last-child { border-right: none;}
+.td-row {
+  height: 120px;
+  text-transform: capitalize;
+}
+.th-row {
+  color: #fff;
+  text-align: center;
+  background: #1a1a1a;
+  text-transform: uppercase;
+}
+
+.th-row span { cursor: pointer; }
