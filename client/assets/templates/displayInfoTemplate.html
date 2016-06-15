@@ -3,7 +3,7 @@
   <div class="info-loader" ng-if="!dataAvailable && !error"><img src="assets/images/ajax-loader.gif" /></div>
   <div class="info-content-wrapper" ng-if="dataAvailable && !error">
     <div class="table-header-wrapper">
-      <div class="th-row th-{{th}}" ng-repeat="th in tableHeaderInfo"><span ng-click="sortBy(th)">{{th}}</span></div>
+      <div class="th-row th-{{th}}" ng-repeat="th in tableHeaderInfo"><span class="th-link" ng-click="sortBy(th)">{{th}}</span></div>
     </div>
     <div class="table-data-wrapper" ng-repeat="info in infos | orderBy: keyName : reverse">
       <div class="td-row td-{{th}}" ng-repeat="th in tableHeaderInfo">{{info[th]}}</div>
