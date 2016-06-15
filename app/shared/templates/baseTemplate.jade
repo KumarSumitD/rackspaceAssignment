@@ -1,0 +1,19 @@
+doctype html
+block vars
+  - var ngApp = htmlApp || '';
+  - var htmlId = htmlApp || '';
+  if bodyController
+    - var body = 'body ng-controller="'+bodyController+'"';
+  else
+    - var body = 'body';
+
+html(ng-app="#{ngApp}" id="#{htmlId}")
+  head
+    block styles
+    include headStyles.jade
+    include headScripts.jade
+  #{body}
+    block header
+    block body
+    block footer
+    block script

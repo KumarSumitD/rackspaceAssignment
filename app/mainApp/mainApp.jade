@@ -1,0 +1,20 @@
+extends ../shared/templates/baseTemplate.jade
+
+block prepend vars
+  - var htmlApp = 'mainApp';
+  - var bodyController = 'mainAppCtrl';
+block styles
+  link(href='assets/css/app/displayinfo.css', rel='stylesheet')
+  link(href='assets/css/app/mainApp.css', rel='stylesheet')
+block header
+  nav
+    .logo
+      | Rackspace Assignment
+
+block body
+  main
+    .show-user-data(display-info infos="userInfo")
+block script
+  script(src='assets/js/common/services/ajaxServices.js')
+  script(src='assets/js/common/directives/displayInfoApp.js')
+  script(src='assets/js/app/mainApp.js')
