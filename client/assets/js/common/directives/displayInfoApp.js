@@ -1,5 +1,5 @@
 var displayInfoApp = angular.module('displayInfoApp',[]);
-
+// Display Table Directive
 displayInfoApp.directive('displayInfo',[function(){
   'use strict';
   return {

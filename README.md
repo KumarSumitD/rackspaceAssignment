@@ -26,5 +26,7 @@ Steps to run the code
 1. If npm is not there, please install npm in your system.
 2. Run npm install
 3. Run bower install
-4. grunt startServer will start the server. Hit your localhost(127.0.0.1) with 3000 port number to see the application.
+4. grunt startServer will start the server. Hit your localhost(127.0.0.1) with 3000 port number to see the application.Hit 127.0.0.1:3000/.
 5. To see test, run karma start.
+
+NOTE: Unit test for directive is not done, as there seems some issue with templateUrl. It might need some config changes in karma to load the template which i am not sure of.

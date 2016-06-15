@@ -8,6 +8,10 @@ var miniApps = {};
 if (module === require.main) startServer();
 
 function startServer() {
+  //- creating express object and setting some basic configuration
+  //- In Ideal State we can export config from a a seperate file and load it
+  //- In Practical scenario we can break down each use case in another file and export it using require
+  //- This willl keep code modular
   app = express();
   app
     .set('trust proxy', true)
@@ -15,7 +19,10 @@ function startServer() {
     .set('views', path.join(process.cwd(), '/app'))
     .set('view engine', 'jade');
 
+  //- This is to load static file, otherwise for static file also request come to Node instead to file.
   app.use(express.static(process.cwd() + '/client'));
+
+  //- Looping through all app and keeping in an array
   glob.sync('./**/*.js', { cwd: process.cwd() + '/app'})
     .forEach(function(file, index) {
       var fileName = path.basename(file, '.js');
@@ -25,6 +32,7 @@ function startServer() {
       miniApps[requireFileName.route].templatePath = path.join(path.dirname(file), fileName);
     });
 
+  //- This function will go through all modules in miniApp array and set the route dynamically in express with help of express middleware
   routeSetup(app);
   function routeSetup(app) {
     _.each(miniApps,function(module){
@@ -39,7 +47,7 @@ function startServer() {
     res.render(currentModule.templatePath, res.myModuleData);
   }
 
-
+  //- App starting on port 3000
   app.listen(3000);
   console.log('Server Started');
 }
